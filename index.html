@@ -1,16 +1,25 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Sang Nguyen - Github.io</title>
-  <meta name="description" content="The HTML5 Herald">
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+	<meta charset="UTF-8">
+	<title>Service AngularJS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<script src="js/app.js"></script>
 </head>
 <body>
-    <h3>Test <em>github.io</em> domain</h3>
+	<div data-ng-app="calc_app" class="wrapper">
+		<div data-ng-controller="calc_controller" class="col-sm-12">
+			<h2>Cac phep toan 2 chu so</h2>
+			<p><label for="num_a">Nhap so A: </label><input type="number" data-ng-model="number_a"></p>
+			<p><label for="num_b">Nhap so B: </label><input type="number" data-ng-model="number_b"></p>
+			<p>
+				<input type="button" data-ng-click="cong()" value="+" />
+				<input type="button" data-ng-click="tru()" value="-" />
+				<input type="button" data-ng-click="nhan()" value="x" />
+				<input type="button" data-ng-click="chia()" value="÷" />
+			</p>
+			<p id="result">{{result}}</p>
+		</div>
+	</div>
 </body>
 </html>
